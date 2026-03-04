@@ -1,0 +1,122 @@
+/* =============================
+   PACOTES DE MARKETING AUTORAIS
+============================= */
+.marketing-autorais {
+  background: linear-gradient(120deg, #1c1c1c, #2a2a2a);
+  color: #fff;
+  padding: 100px 60px;
+  overflow: hidden;
+}
+
+.marketing-autorais .container {
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+.autorais-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 80px;
+}
+
+.autorais-title h1 {
+  font-family: 'Playfair Display', serif;
+  font-size: 56px;
+  font-weight: 400;
+  line-height: 1.15;
+}
+
+.autorais-title span {
+  font-weight: 700;
+}
+
+.autorais-side {
+  border-left: 1px solid rgba(255, 255, 255, 0.2);
+  padding-left: 30px;
+  max-width: 320px;
+}
+
+.autorais-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.autorais-card.pacote {
+  padding: 50px;
+  min-height: 380px;
+  display: flex;
+  flex-direction: column;
+  background: #f2f2f2;
+  color: #111;
+  border-radius: 22px;
+  position: relative;
+  transition: all 0.4s ease;
+  opacity: 0;
+  transform: translateY(40px);
+  border: 2px solid #c6a75e;
+}
+
+.autorais-card.pacote:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.25);
+}
+
+.autorais-card.pacote::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: #c6a75e;
+  transition: width 0.4s ease;
+  border-radius: 0 0 22px 22px;
+}
+
+.autorais-card.pacote:hover::after {
+  width: 100%;
+}
+
+.autorais-card.pacote.show {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.pacote-lista {
+  list-style: none;
+  margin: 25px 0;
+  padding: 0;
+}
+
+.pacote-lista li {
+  margin-bottom: 10px;
+  font-size: 14px;
+  color: #444;
+  font-weight: 300;
+}
+
+.pacote-btn {
+  margin-top: auto;
+  text-decoration: none;
+  text-align: center;
+  padding: 14px;
+  border-radius: 50px;
+  background: #111;
+  color: #fff;
+  font-size: 13px;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+.pacote-btn:hover {
+  background: #c6a75e;
+  color: #111;
+}
+
+.destaque {
+  background: linear-gradient(145deg, #f8f8f8, #eaeaea);
+  transform: scale(1.03);
+}

@@ -1,0 +1,173 @@
+/* =============================
+   RESPONSIVO
+============================= */
+@media (max-width: 1024px) {
+  .autorais-grid {
+    grid-template-columns: 1fr;
+  }
+  .destaque {
+    transform: scale(1);
+  }
+}
+
+@media (max-width: 900px) {
+  .section {
+    grid-template-columns: 1fr;
+  }
+  h1 {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 15px;
+  }
+
+  header {
+    padding: 14px 20px;
+  }
+
+  .about-wrapper {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .about-icon {
+    margin-bottom: 20px;
+  }
+
+  .about-text {
+    font-size: 16px;
+  }
+
+  .autorais-top {
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .autorais-side {
+    border-left: none;
+    padding-left: 0;
+  }
+
+  .autorais-title h1 {
+    font-size: 36px;
+  }
+
+  .gallery {
+    flex-direction: row;
+    overflow-x: scroll;
+    scroll-snap-type: x mandatory;
+    scroll-behavior: smooth;
+  }
+
+  .gallery::-webkit-scrollbar {
+    display: none;
+  }
+
+  .gallery {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  .card {
+    flex: 0 0 100vw;
+    scroll-snap-align: center;
+  }
+}
+@media (max-width: 1200px) {
+
+    .metodo-section {
+        padding-left: 80px;
+    }
+
+    .right-text {
+        margin-left: 80px;
+    }
+
+}
+
+@media (max-width: 768px) {
+
+    .metodo-section {
+        flex-direction: column;
+        justify-content: center;
+        padding: 40px 20px;
+        text-align: center;
+    }
+
+    .glass-panel {
+        width: 100%;
+        height: auto;
+        margin-bottom: 40px;
+        border-right: none;
+    }
+
+    .right-text {
+        order: -1;
+        margin-left: 0;
+        text-align: center;
+        margin-bottom: 40px;
+    }
+
+    .metodo-title {
+        text-align: center;
+    }
+
+    .metodo-sub {
+        margin-top: 40px;
+        text-align: center;
+    }
+
+}
+
+/* ===== RESPONSIVO ===== */
+
+@media (max-width: 1024px) {
+
+    .hero-content {
+        margin-left: 20%;
+    }
+
+    .glass-horizontal {
+        height: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .hero {
+        justify-content: center;
+        text-align: center;
+        padding: 0 8%;
+    }
+
+    .hero-content {
+        margin-left: 0;
+        max-width: 100%;
+    }
+
+    .hero-content h1 {
+        font-size: clamp(24px, 6vw, 38px);
+    }
+
+    .glass-horizontal {
+        top: 115%;
+        height: 80px;
+        width: 800px;
+        left: -10%;
+    }
+}
+
+@media (max-width: 480px) {
+
+    .hero-content h1 {
+        font-size: 22px;
+        line-height: 1.5;
+    }
+
+    .glass-horizontal {
+        height: 70px;
+    }
+}

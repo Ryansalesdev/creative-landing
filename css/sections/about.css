@@ -1,0 +1,51 @@
+/* =============================
+   ABOUT SECTION
+============================= */
+.about-section {
+  background: #f2eee7;
+  color: #1c1c1c;
+  padding: 120px 40px;
+  opacity: 0;
+  transform: translateY(60px);
+  transition: opacity 1s ease, transform 1s ease;;
+}
+.about-section.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.about-wrapper {
+  max-width: 1200px;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.about-icon {
+  font-size: 70px;
+  opacity: 0.85;
+}
+
+.about-text {
+  font-size: 20px;
+  line-height: 1.6;
+  margin-bottom: 30px;
+  font-weight: 300;
+}
+
+.about-btn {
+  background: transparent;
+  border: 1px solid rgba(0, 0, 0, 0.6);
+  color: rgb(0, 0, 0);
+  padding: 14px 24px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: 0.3s;
+}
+
+.about-btn:hover {
+  background: #c6b6a3;
+}

@@ -1,0 +1,143 @@
+/* ===== HERO ===== */
+
+.hero {
+  position: relative;
+  height: 160vh; /* ESSENCIAL */
+  overflow: hidden;
+}
+
+.hero-inner {
+  position: sticky;
+  top: 160px; /* altura do header */
+  height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 5;
+  max-width: 900px;
+}
+/* ===== FUNDO ===== */
+
+
+  .hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url("/fotos/duda1.png") center/cover no-repeat;
+  transform: scale(1.05);
+  will-change: transform;
+
+
+    background: radial-gradient(
+        circle at 30% 40%,
+        #3a3a3a 0%,
+        #2b2b2b 35%,
+        #1e1e1e 65%,
+        #111 100%
+    );
+
+    will-change: transform;
+    transition: transform 0.15s linear, filter 0.15s linear;
+    filter: blur(6px); /* começa levemente desfocado */
+}
+/* ===== TEXTO ===== */
+
+.hero-content {
+    position: relative;
+    z-index: 3;
+    max-width: 780px;
+    margin-left: 35%;
+}
+
+.hero-content h1 {
+    font-size: clamp(28px, 4vw, 60px);
+    font-weight: 300;
+    line-height: 1.4;
+    color: #fff;
+}
+
+.line {
+  display: block;
+  font-size: 48px;
+  font-weight: 500;
+  color: #ffffff;
+  opacity: 0;
+  transform: translateY(40px);
+}
+.line.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* ===== VIDRO ===== */
+
+.glass-horizontal {
+    position: absolute;
+    top: 120%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 140px;
+
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(30px);
+    -webkit-backdrop-filter: blur(30px);
+
+    border-top: 1px solid rgba(255,255,255,0.3);
+    border-bottom: 1px solid rgba(255,255,255,0.3);
+
+    z-index: 2;
+    overflow: hidden;
+}
+
+
+
+.glass-horizontal::before {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 100%;
+    background: linear-gradient(
+        120deg,
+        transparent,
+        rgba(255,255,255,0.2),
+        transparent
+    );
+    animation: shine 8s infinite linear;
+}
+
+@keyframes shine {
+    from { transform: translateX(-50%); }
+    to { transform: translateX(50%); }
+}
+
+.hero-light {
+    position: absolute;
+    width: 120%;
+    height: 120%;
+    top: -10%;
+    left: -10%;
+    z-index: 2;
+    pointer-events: none;
+
+    background: radial-gradient(
+        circle at center,
+        rgba(255,255,255,0.15),
+        transparent 60%
+    );
+
+    animation: lightMove 18s ease-in-out infinite;
+}
+
+@keyframes lightMove {
+    0% {
+        transform: translate(-5%, -5%) scale(1);
+    }
+    50% {
+        transform: translate(5%, 5%) scale(1.15);
+    }
+    100% {
+        transform: translate(-5%, -5%) scale(1);
+    }
+}

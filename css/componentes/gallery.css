@@ -1,0 +1,59 @@
+/* =============================
+   GALERIA DE VIDEOS
+============================= */
+.gallery-wrapper {
+  position: relative;
+}
+
+.gallery {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+.card {
+  flex: 1;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.card video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+.nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 20px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  font-size: 20px;
+  cursor: pointer;
+  z-index: 10;
+  border-radius: 50%;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
+
+@media (min-width: 769px) {
+  .nav {
+    display: none;
+  }
+}

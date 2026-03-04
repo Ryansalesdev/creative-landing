@@ -1,0 +1,43 @@
+/* ===== TÍTULO PREMIUM ===== */
+
+.metodo-title {
+    margin: 0;
+    line-height: 1.05;
+    text-align: left;
+}
+
+/* MÉTODO */
+.linha-1 {
+    display: block;
+    font-size: clamp(32px, 6vw, 80px);
+    font-weight: 300;
+    letter-spacing: 6px;
+    color: white;
+    margin-left: 6px;
+    
+}
+
+/* SENSORIAL */
+.linha-2 {
+    display: block;
+    font-size: clamp(48px, 9vw, 120px);
+    font-weight: 700;
+    letter-spacing: 6px;
+    color: white;
+}
+
+/* Frase menor */
+.metodo-sub {
+    margin-top: 150px;
+    font-size: 18px;
+    opacity: 0.85;
+    text-align: left;
+    color: white;
+}
+
+/* Sombra suave para destacar da imagem */
+.right-text {
+    text-shadow: 0 5px 20px rgba(172, 171, 171, 0.5);
+
+    margin-left: 160px; /* controla o quanto afasta do vidro */
+}
